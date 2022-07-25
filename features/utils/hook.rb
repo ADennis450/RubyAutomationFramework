@@ -1,7 +1,7 @@
 require 'selenium-webdriver'
 
 Before do
-  if(ENV['Browser'] = 'chrome')
+  if ENV['Browser'] == 'chrome'
     web_driver = Selenium::WebDriver.for :chrome
     web_driver.manage.window.maximize
     web_driver.manage.timeouts.implicit_wait = 10
